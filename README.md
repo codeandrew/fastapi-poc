@@ -4,6 +4,26 @@
 
 ![fastapi-0]
 
+
+## API Endpoints / Features
+
+- USERS
+  - create
+  - get all
+  - get {user_id}
+- ITEMS
+  - get
+  - create
+- FILES
+  - upload Files
+
+### API DOCUMENTATION
+
+URL: `{$HOST}/docs`
+![fastapi-1-docs]
+
+
+
 ## Setup 
 ```bash
 python3 -m venv .venv
@@ -40,3 +60,4 @@ access whole body request
 
 <!-- LINKS -->
 [fastapi-0]: ./uploads/fastapi-flow.jpeg
+[fastapi-1-docs]: ./uploads/fastapi-docs.png
