@@ -55,7 +55,28 @@ https://stackoverflow.com/questions/68231936/how-can-i-get-headers-or-a-specific
 
 access whole body request
 
+### Database Schema vs Pydantic Models
 
+https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-7-sqlalchemy-database-setup/
+
+### Authentication and SSO 
+
+- https://blog.hanchon.live/guides/google-login-with-fastapi-and-jwt/
+> Very Detailed 
+ 
+- https://nilsdebruin.medium.com/fastapi-google-as-an-external-authentication-provider-3a527672cf33
+
+- https://blog.authlib.org/2020/fastapi-google-login
+> Very Bsic
+
+
+### Security 
+Securing salt has password 
+https://stackoverflow.com/questions/9594125/salt-and-hash-a-password-in-python
+
+### Deployment 
+
+https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-13-docker-deploy/
 
 
 <!-- LINKS -->
