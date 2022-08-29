@@ -1,7 +1,15 @@
 # fastapi-poc
 
+## Overview
+
+![fastapi-0]
+
 ## Setup 
+```
 python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt 
+```
 
 
 ## troubleshooting
@@ -22,5 +30,10 @@ async def read_root(request: Request):
 Accessing Request Headers:
 https://stackoverflow.com/questions/68231936/how-can-i-get-headers-or-a-specific-header-from-my-backend-api
 
-
 access whole body request
+
+
+
+
+<!-- LINKS -->
+[fastapi-0]: ./uploads/fastapi-flow.jpeg

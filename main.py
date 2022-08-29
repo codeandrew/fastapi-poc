@@ -72,7 +72,6 @@ async def create_file(file: bytes = File(description="a file read as bytes")):
     }
     return  file_object
 
-
 @app.post("/upload_file")
 async def upload_file(request: Request, file: UploadFile):
     if not file: return { "message": "no file sent"}
@@ -104,7 +103,6 @@ async def upload_file(request: Request, file: UploadFile):
     return  file_object
 
 
-
 """
 Root APIS for basic Examples 
 """
@@ -124,7 +122,6 @@ def read_root(request: Request):
     }
     return example
 
-
 @app.post("/")
 async def post_root(request: Request):
     header = request.headers
@@ -143,7 +140,6 @@ async def post_root(request: Request):
     }
 
     return  api
-
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, item: Item):
