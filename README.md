@@ -5,10 +5,13 @@
 ![fastapi-0]
 
 ## Setup 
-```
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt 
+
+# to run the application 
+uvicorn main:app --reload
 ```
 
 
