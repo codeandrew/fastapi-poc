@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from fastapi import Depends, FastAPI, Request, HTTPException
+from email import header
+from urllib import request
+from fastapi import Depends, FastAPI, Request, HTTPException, File, UploadFile
 from sqlalchemy.orm import Session
 from pydantic import BaseModel 
 
@@ -58,6 +60,48 @@ def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return items
 
 
+"""
+Files Requests
+https://fastapi.tiangolo.com/tutorial/request-files/
+"""
+
+@app.post("/file")
+async def create_file(file: bytes = File(description="a file read as bytes")):
+    file_object = {
+        'file_size': len(file)
+    }
+    return  file_object
+
+
+@app.post("/upload_file")
+async def upload_file(request: Request, file: UploadFile):
+    if not file: return { "message": "no file sent"}
+
+    header = request.headers
+    client_ip = request.client.host
+
+    filename = file.filename # name of the file uploaded
+    contents = await file.read() # the whole file as bytes
+
+    try:
+        filename = f'uploads/{filename}'
+        print(f"Saving to File: {filename}")
+        
+        with open (filename, 'wb') as new_file:
+            new_file.write(contents)
+        message = f"File {filename} Successfully Saved!"
+            
+    except:
+        print("Can't Write file")
+        message = f"File {filename} NOT saved!"
+
+    file_object = {
+        # 'file_name': contents.filename,
+        "client_ip": client_ip,
+        "headers": header,
+        "message": message
+    }
+    return  file_object
 
 
 
