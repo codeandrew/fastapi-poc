@@ -34,6 +34,12 @@ pip3 install -r requirements.txt
 uvicorn main:app --reload
 ```
 
+FOR DOCKERFILE
+
+```
+docker build -t fastapi:1 .  
+docker run -p 80:80 fastapi:1 
+```
 
 ## troubleshooting
 

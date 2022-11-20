@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from doctest import Example
-from email import header
-from urllib import request
 from fastapi import Depends, FastAPI, Request, HTTPException, File, UploadFile
 from sqlalchemy.orm import Session
 from pydantic import BaseModel 
