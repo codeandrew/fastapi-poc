@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from doctest import Example
 from email import header
 from urllib import request
 from fastapi import Depends, FastAPI, Request, HTTPException, File, UploadFile
@@ -155,3 +156,40 @@ def save_item(item_id: int, item: Item):
         "q": q
     }
 
+
+"""
+PRACTICE API
+"""
+@app.get("/api/family")
+async def get_family(request: Request):
+    hard_data = [
+        {
+            "name": "Andrew",
+            "age": 28,
+            "profile_pic": "https://avatars.githubusercontent.com/u/21142513?s=400&u=b7736e410526c452e38a9023c0239fb2eff0812a&v=4",
+            "occupation": "CyberSecurity",
+            "hobbies": "Playstation "
+        },
+        {
+            "name": "Kers",
+            "age": 26,
+            "profile_pic": "https://scontent.fmnl6-2.fna.fbcdn.net/v/t39.30808-6/273140057_458164309294286_2244678840279332953_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGWjNscqCa8XzLid_TD7cboxX2cK1fyGN3FfZwrV_IY3cwp1CpSkg6D6WjD9LtMQTbmqU0MxEuoUDwLq9N0A_rH&_nc_ohc=aCH3eBx58rgAX-Cjd7y&_nc_ht=scontent.fmnl6-2.fna&oh=00_AfBNgm_3OIEWNdiu-XiMHDGZQmLokfwGMbcM_U41EFBKtQ&oe=637FC351",
+            "occupation": "Front End Developer",
+            "hobbies": "Food, tsaka mabadtrip "
+        },
+        {
+            "name": "archer",
+            "age": 1,
+            "profile_pic":"https://scontent.fmnl6-2.fna.fbcdn.net/v/t39.30808-6/310980583_630856592025056_7532932248834882511_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGQlPFnMjnELALZqSl7j9lKAd1EOSoXDP0B3UQ5KhcM_S5IZ4lu4bu99czxM66_AD7gw3VhdjQItGktSFxMpaY8&_nc_ohc=OADw32GlrE0AX9mjrRN&_nc_ht=scontent.fmnl6-2.fna&oh=00_AfCP-PsvcuQFB2OlLd99zLxdDNEDniZUvA-GLKvhsXm9RA&oe=637EE706",
+            "occupation": "Bunso",
+            "hobbies": "Manira ng Tsinelas "
+        },
+        {
+            "name": "Freya",
+            "age": 1,
+            "profile_pic": "https://scontent.fmnl6-1.fna.fbcdn.net/v/t39.30808-6/311313085_630856608691721_5986449925629289682_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHPTDwP1RE4to1dO-N7p9_c7WcowwG8j9_tZyjDAbyP30pVlfBSLOI0BaF6esb55_Fuw9jSoMLO_KMxneMTMLuT&_nc_ohc=kLkfqBCUH3wAX8DMXoA&_nc_ht=scontent.fmnl6-1.fna&oh=00_AfBHFy2Hkr6CBbf61t5ZFX3wY5WzN8OvQD5S4eUmIFW7ug&oe=637E1091",
+            "occupation": "Ate",
+            "hobbies": "Mangagaw ng upuan, Part Time Sisiw "
+        }
+    ]
+    return hard_data
