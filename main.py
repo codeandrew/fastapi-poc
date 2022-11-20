@@ -47,32 +47,6 @@ async def read_user(user_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="User not found")
     return db_user
 
-
-@app.post("/users/{user_id}/items/", response_model=schemas.Item)
-async def create_item_for_user(
-    user_id: int, item: schemas.ItemCreate, db: Session = Depends(get_db)
-):
-    return crud.create_user_item(db=db, item=item, user_id=user_id)
-
-
-@app.get("/items/", response_model=list[schemas.Item])
-def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    items = crud.get_items(db, skip=skip, limit=limit)
-    return items
-
-
-"""
-Files Requests
-https://fastapi.tiangolo.com/tutorial/request-files/
-"""
-
-@app.post("/file")
-async def create_file(file: bytes = File(description="a file read as bytes")):
-    file_object = {
-        'file_size': len(file)
-    }
-    return  file_object
-
 @app.post("/upload_file")
 async def upload_file(request: Request, file: UploadFile):
     if not file: return { "message": "no file sent"}
@@ -141,21 +115,6 @@ async def post_root(request: Request):
     }
 
     return  api
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, item: Item):
-    return {
-        "item_id": item_id,
-        "q": q
-    }
-
-@app.put("/items/{item_id}")
-def save_item(item_id: int, item: Item):
-    return {
-        "item_name": item.price,
-        "q": q
-    }
-
 
 """
 PRACTICE API
