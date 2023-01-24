@@ -84,6 +84,8 @@ https://stackoverflow.com/questions/9594125/salt-and-hash-a-password-in-python
 
 https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-13-docker-deploy/
 
+## TO FOLLOW 
+- https://www.youtube.com/watch?v=0_seNFCtglk&list=PLrOQsSoS-V69xir8m0LfdLDHG0ZAgCj2U
 
 <!-- LINKS -->
 [fastapi-0]: ./uploads/fastapi-flow.jpeg
