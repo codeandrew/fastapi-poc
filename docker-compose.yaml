@@ -1,0 +1,10 @@
+version: '3'
+services:
+  my-app:
+    image: codeandrew/jaf-fastapi:VERSION
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    environment:
+      - environment=test
