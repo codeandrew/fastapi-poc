@@ -1,0 +1,10 @@
+env:
+  environment: test
+  
+app:
+  image: 'codeandrew/jaf-fastapi'
+  tag: 'latest'
+  port: 80
+
+replicas: 1
+imagePullSecrets: regsecret

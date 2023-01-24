@@ -1,0 +1,10 @@
+env:
+  environment: test
+  
+app:
+  image: 'jaf.azurecr.io/jaf-fastapi'
+  tag: 'latest'
+  port: 80
+
+replicas: 3
+imagePullSecrets: regsecret
