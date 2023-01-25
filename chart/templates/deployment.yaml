@@ -25,4 +25,8 @@ spec:
             - name: {{ $key }}
               value: {{ $val | quote }}
           {{- end }}  
+<<<<<<< HEAD
         {{- end }}
+=======
+        {{- end }}
+>>>>>>> 173d22260ad7ca86a1a9802c81c3c2b5f8cac2c3
