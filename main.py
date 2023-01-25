@@ -6,6 +6,7 @@ from urllib import request
 from fastapi import Depends, FastAPI, Request, HTTPException, File, UploadFile
 from sqlalchemy.orm import Session
 from pydantic import BaseModel 
+import os
 
 # Creates FastAPI instance
 app = FastAPI()
@@ -116,6 +117,8 @@ class Item(BaseModel):
 def read_root(request: Request):
     example =  {
         "Status": "Running!",
+        "app_version" : os.getenv('app_version', "fresh"),
+        "environment" : os.getenv('environment', "local"),
         "client_ip": request.client.host,
         "headers": request.headers
 
