@@ -7,4 +7,3 @@ app:
   port: 80
 
 replicas: 1
-imagePullSecrets: regsecret

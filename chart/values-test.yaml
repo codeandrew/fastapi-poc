@@ -4,7 +4,7 @@ env:
 
 app:
   image: 'codeandrew/fastapi'
-  tag: 'fresh'
+  tag: 'fresh' # OVERRIDE
   port: 80
 
 replicas: 1

@@ -1,7 +1,8 @@
 
 set -x
 #VERSION=$1
-VERSION=$(date +'%y.%m.%d')-$1
+BUILD_NUMBER=$1
+VERSION=$(date +'%y.%m.%d')-$BUILD_NUMBER
 sed -i "s/APPVERSION/$VERSION/" chart/Chart.yaml
 sed -i "s/APPVERSION/$VERSION/" chart/values-*.yaml
 
