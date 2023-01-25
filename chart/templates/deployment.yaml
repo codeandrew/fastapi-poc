@@ -14,9 +14,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image:
-            repository: {{ .Values.app.image }}
-            tag: {{ .Values.app.tag }}
+          image: "{{ .Values.app.image }}:{{ .Values.app.tag }}"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: {{ .Values.app.port }}

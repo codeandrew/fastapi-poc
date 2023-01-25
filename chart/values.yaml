@@ -1,10 +1,10 @@
 env:
   environment: test
+  app_version: APPVERSION
   
 app:
-  #image: 'jaf.azurecr.io/jaf-fastapi'
-  image: 'codeandrew/jaf-fastapi'
+  image: 'codeandrew/fastapi'
   tag: 'latest'
   port: 80
 
-imagePullSecrets: regsecret
+replicas: 1

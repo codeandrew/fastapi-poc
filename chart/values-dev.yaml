@@ -2,7 +2,7 @@ env:
   environment: test
   
 app:
-  image: 'codeandrew/jaf-fastapi'
+  image: 'codeandrew/fastapi'
   tag: 'latest'
   port: 80
 

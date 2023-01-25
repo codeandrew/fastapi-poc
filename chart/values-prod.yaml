@@ -2,7 +2,7 @@ env:
   environment: test
   
 app:
-  image: 'jaf.azurecr.io/jaf-fastapi'
+  image: 'jaf.azurecr.io/fastapi'
   tag: 'latest'
   port: 80
 

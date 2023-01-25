@@ -1,10 +1,10 @@
 env:
   environment: test
-  
+  app_version: APPVERSION
+
 app:
-  image: 'codeandrew/jaf-fastapi'
-  tag: 'latest'
+  image: 'codeandrew/fastapi'
+  tag: 'fresh'
   port: 80
 
 replicas: 1
-imagePullSecrets: regsecret
